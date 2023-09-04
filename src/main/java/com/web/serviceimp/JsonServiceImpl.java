@@ -51,12 +51,20 @@ public class JsonServiceImpl implements JsonService {
                 }
 
                 String headersStr = headers.isEmpty() ? "" : headers.toString();
+                
+                String apiConfig = "{"
+                        + "\"name\":\"" + name + "\","
+                        + "\"method\":\"" + method + "\","
+                        + "\"url\":\"" + url + "\""
+                        + "}";
+                
 
                 FormattedData formattedData = new FormattedData();
                 formattedData.setName(name);
                 formattedData.setMethod(method);
                 formattedData.setUrl(url);
                 formattedData.setHeaders(headersStr);
+                formattedData.setApiConfig(apiConfig);
 
                 formattedDataRepository.save(formattedData);
             }

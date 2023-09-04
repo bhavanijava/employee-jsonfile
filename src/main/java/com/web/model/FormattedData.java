@@ -23,5 +23,6 @@ public class FormattedData {
     private String method;
     private String url;
     private String headers;
+    private String apiConfig;
 
 }
